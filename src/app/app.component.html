@@ -1,0 +1,2 @@
+<app-farm (selectedFarm)="navigateFarm($event)" *ngIf="!openFarm"></app-farm>
+<app-farm-details *ngIf="openFarm" [selectedFarm]="openFarm"></app-farm-details>

@@ -1,0 +1,23 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="text-center">Welcome to the Farm Management Application</h1>
+  </div>
+</div>
+<div class="row">
+<div class="col-sm-6" *ngFor="let farm of farmList">
+<div class="card text-center" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Farm Image">
+  <div class="card-body">
+    <h5 class="card-title">{{farm.name}}</h5>
+    <p class="card-text">{{farm.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Latest Temperature is {{farm.latestTemperature}}&#8451;</li>
+    <li class="list-group-item">Latest Humidity is {{farm.latestHumidity}}%</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link" class="btn btn-primary" (click)="onFarmSelect(farm)">View {{farm.name}}</a>
+  </div>
+</div>
+</div>
+</div>
